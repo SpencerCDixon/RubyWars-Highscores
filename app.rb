@@ -1,6 +1,11 @@
 require 'sinatra'
 require 'pg'
 
+configure do
+  enable :sessions
+  set :session_secret, ENV['SESSION_SECRET']
+end
+
 configure :development do
   require 'sinatra/reloader'
   set :database_config, { dbname: 'rubywars' }
