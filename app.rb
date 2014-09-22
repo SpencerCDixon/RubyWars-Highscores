@@ -1,9 +1,7 @@
 require 'sinatra'
-require 'pry'
 require 'pg'
 
 configure :development do
-  require 'pry'
   require 'sinatra/reloader'
   set :database_config, { dbname: 'rubywars' }
 end
